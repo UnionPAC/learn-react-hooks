@@ -1,7 +1,7 @@
 const App = () => {
   return (
     <div>
-      <p>hi</p>
+      <p>Learn React Hooks 🦄</p>
     </div>
   );
 };
