@@ -2,10 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import useCurrentFilePath from "../hooks/useCurrentFilePath";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
+const Checkbox = () => {
   const { currentDirectory, currentFileName } = useCurrentFilePath();
+  const [liked, setLiked] = useState(false);
+
+  const handleChange = (e) => {
+    setLiked(e.target.checked);
+  };
 
   return (
     <>
@@ -15,13 +18,10 @@ const Counter = () => {
       <div className="mt-10 flex flex-col justify-center items-center">
         <div className="text-center mb-16">
           {/* EXAMPLE CODE STARTS HERE */}
-          <p className="p-4">{count}</p>
-          <button
-            onClick={() => setCount(count + 1)}
-            className="p-2 border-2 bg-blue-200 border-blue-400 rounded active:scale-95"
-          >
-            increment
-          </button>
+          <label>
+            <input type="checkbox" checked={liked} onChange={handleChange} className="mb-4" />
+          </label>
+          <p>You {liked ? 'liked' : "haven't liked"} this</p>
         </div>
         <div>
           <Link
@@ -37,4 +37,4 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+export default Checkbox;

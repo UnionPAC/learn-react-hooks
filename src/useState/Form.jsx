@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import useCurrentFilePath from "../hooks/useCurrentFilePath";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
+const Form = () => {
   const { currentDirectory, currentFileName } = useCurrentFilePath();
+  const [name, setName] = useState("John");
+  const [age, setAge] = useState(18);
 
   return (
     <>
@@ -15,13 +15,22 @@ const Counter = () => {
       <div className="mt-10 flex flex-col justify-center items-center">
         <div className="text-center mb-16">
           {/* EXAMPLE CODE STARTS HERE */}
-          <p className="p-4">{count}</p>
+          <h4 className="mb-8">What's your name?</h4>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="px-2 border-b-2 focus:outline-none block mb-6"
+          />
           <button
-            onClick={() => setCount(count + 1)}
-            className="p-2 border-2 bg-blue-200 border-blue-400 rounded active:scale-95"
+            onClick={() => setAge(age + 1)}
+            className="mb-6 py-1 px-6 border-2 bg-green-200 border-green-300 rounded active:scale-95"
           >
-            increment
+            Increment Age
           </button>
+          <p className="text-sm">
+            Output: Hello, {name}. You are {age}
+          </p>
         </div>
         <div>
           <Link
@@ -37,4 +46,4 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+export default Form;
