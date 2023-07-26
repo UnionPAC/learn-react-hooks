@@ -2,7 +2,7 @@
 
 ✨ I made this repository for 2 reasons:
 
-1. To refresh myself on all of the different React Hooks and how they are used.
+1. To refresh myself on all of the different React Hooks and how they are used
 
 2. As a tool to be used if I need a quick reminder of a Hook in the future
 
@@ -31,7 +31,7 @@
 - useSyncExternalStore
 - Custom Hooks
 
-### State Hooks
+### State Hooks 🧠
 
 #### useState
 
@@ -39,13 +39,13 @@
 
 ---
 
-### Context Hooks
+### Context Hooks 🏗️
 
 #### useContext
 
 ---
 
-### Ref Hooks
+### Ref Hooks 🍎
 
 #### useRef
 
@@ -53,7 +53,7 @@
 
 ---
 
-### Effect Hooks
+### Effect Hooks ✨
 
 #### useEffect
 
@@ -63,7 +63,7 @@
 
 ---
 
-### Performance Hooks
+### Performance Hooks 🏎️
 
 #### useMemo
 
@@ -75,7 +75,7 @@
 
 ---
 
-### Other Hooks
+### Other Hooks 🪝
 
 #### useDebugValue
 
@@ -85,7 +85,7 @@
 
 ---
 
-### Custom Hooks
+### Custom Hooks 👑
 
 https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component
 
