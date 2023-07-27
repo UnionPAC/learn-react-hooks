@@ -5,13 +5,17 @@ import App from "./App.jsx";
 import Counter from "./useState/Counter.jsx";
 import TextField from "./useState/TextField.jsx";
 import Checkbox from "./useState/Checkbox.jsx";
-import Form from "./useState/Form.jsx";
+import { Form as StateForm } from "./useState/Form.jsx";
+import { Form as ReducerForm } from "./useReducer/Form.jsx";
+import TodoList from "./useReducer/TodoList.jsx";
+import ErrorPage from "./error-page.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/useState/Counter",
@@ -27,7 +31,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/useState/Form",
-    element: <Form />,
+    element: <StateForm />,
+  },
+  {
+    path: "/useReducer/Form",
+    element: <ReducerForm />,
+  },
+  {
+    path: "/useReducer/TodoList",
+    element: <TodoList />,
   },
 ]);
 

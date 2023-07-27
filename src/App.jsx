@@ -22,7 +22,12 @@ const App = () => {
 
       <h2 className="text-xl font-semibold m-4">Context Hooks</h2>
       <ul className="space-y-2 text-center">
-        <li></li>
+        <li>
+          <Link to="/useReducer/Form">Form</Link>
+        </li>
+        <li>
+          <Link to="/useReducer/TodoList">Todo List</Link>
+        </li>
       </ul>
 
       <h2 className="text-xl font-semibold m-4">Ref Hooks</h2>

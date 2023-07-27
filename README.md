@@ -46,9 +46,41 @@ useState is a React Hook that lets you add a state variable to your component.
 const [state, setState] = useState(initialState);
 ```
 
-
-
 #### useReducer
+
+useReducer is a React Hook that lets you add a reducer to your component.
+
+*Note: useReducer is very similar to useState, but it lets you move the state update logic from event handlers into a single function outside of your component.*
+
+**Syntax**
+```
+const [state, dispatch] = useReducer(reducer, initialArg, init?)
+```
+
+**Parameters**
+- `reducer`: The reducer function that specifies how the state gets updated. 
+*Takes the state and action as args and should return the next state.*
+
+- `initialArg`: The value from which the initial state is calculated.
+*How the initial state is calculated, depends on the `init` arg.*
+
+- `init`: The initializer function.
+
+**Returns**
+
+useReducer returns an array with exactly two values:
+
+1. The current state
+2. The `dispatch` function that lets you update the state to a different value and trigger a re-render
+
+**wtf is a reducer?**
+Components with many state updates spread across many event handlers can get overwhelming. For these cases, you can consolidate all the state update logic outside your component in a single function, called a reducer.
+
+👉 Reducers are a different way to handle state. You can migrate from useState to useReducer in three steps:
+
+1. Move from setting state to dispatching actions.
+2. Write a reducer function.
+3. Use the reducer from your component.
 
 ---
 
