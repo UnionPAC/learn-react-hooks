@@ -35,34 +35,37 @@
 
 State lets a component “remember” information like user input.
 
-*For example, a form component can use state to store the input value, while an image gallery component can use state to store the selected image index.*
+_For example, a form component can use state to store the input value, while an image gallery component can use state to store the selected image index._
 
 #### useState
 
-useState is a React Hook that lets you add a state variable to your component.
+`useState` is a React Hook that lets you add a state variable to your component.
 
 **Syntax**
+
 ```
 const [state, setState] = useState(initialState);
 ```
 
 #### useReducer
 
-useReducer is a React Hook that lets you add a reducer to your component.
+`useReducer` is a React Hook that lets you add a reducer to your component.
 
-*Note: useReducer is very similar to useState, but it lets you move the state update logic from event handlers into a single function outside of your component.*
+_Note: useReducer is very similar to useState, but it lets you move the state update logic from event handlers into a single function outside of your component._
 
 **Syntax**
+
 ```
 const [state, dispatch] = useReducer(reducer, initialArg, init?)
 ```
 
 **Parameters**
-- `reducer`: The reducer function that specifies how the state gets updated. 
-*Takes the state and action as args and should return the next state.*
+
+- `reducer`: The reducer function that specifies how the state gets updated.
+  _Takes the state and action as args and should return the next state._
 
 - `initialArg`: The value from which the initial state is calculated.
-*How the initial state is calculated, depends on the `init` arg.*
+  _How the initial state is calculated, depends on the `init` arg._
 
 - `init`: The initializer function.
 
@@ -88,9 +91,44 @@ Components with many state updates spread across many event handlers can get ove
 
 Context lets a component receive information from distant parents without passing it as props.
 
-*For example, your app’s top-level component can pass the current UI theme to all components below, no matter how deep.*
+_For example, your app’s top-level component can pass the current UI theme to all components below, no matter how deep._
 
 #### useContext
+
+`useContext` is a React Hook that lets you read and subscribe to context from your component.
+
+**Syntax**
+
+```
+const value = useContext(SomeContext)
+```
+
+**Parameters**
+
+- `someContext`: The context that you've previously created with `createContext`
+
+**Returns**
+`useContext` returns the context value for the calling component. It is determined as the value passed to the closest `SomeContext.Provider` above the calling component in the tree.
+
+---
+
+### Using Reducer and Context to Scale Up ... 🍄<small>1UP</small>
+
+**Reducers** let you consolidate a component's state update logic.
+**Context** lets you pass information deep down to other components.
+
+> *You can combine reducers and context together to manage complex state*
+
+A reducer helps keep the event handlers short and concise. However, as your app grows its hard to to manage component access to state and dispatch.
+
+Solution: Put both the `state` and `dispatch` into context.
+This way, any component below & in the tree can read the state and dispatch actions without *prop-drilling*.
+
+**How to combine a reducer with context:**
+
+1. Create the context
+2. Put state and dispatch into context
+3. Use context anywhere in the tree
 
 ---
 
@@ -120,7 +158,7 @@ Effects let a component connect to and synchronize with external systems. This i
 
 A common way to optimize re-rendering performance is to skip unnecessary work.
 
-*For example, you can tell React to reuse a cached calculation or to skip a re-render if the data has not changed since the previous render.*
+_For example, you can tell React to reuse a cached calculation or to skip a re-render if the data has not changed since the previous render._
 
 #### useMemo
 
