@@ -112,7 +112,7 @@ const value = useContext(SomeContext)
 
 ---
 
-### Using Reducer and Context to Scale Up ... 🍄<small>1UP</small>
+### Using Reducer and Context to Scale Up 🚀
 
 **Reducers** let you consolidate a component's state update logic.
 **Context** lets you pass information deep down to other components.
@@ -130,6 +130,8 @@ This way, any component below & in the tree can read the state and dispatch acti
 2. Put state and dispatch into context
 3. Use context anywhere in the tree
 
+*Note: You can further declutter the components by moving all wiring into one file*
+
 ---
 
 ### Ref Hooks 🍎
@@ -137,6 +139,36 @@ This way, any component below & in the tree can read the state and dispatch acti
 Refs let a component hold some information that isn’t used for rendering, like a DOM node or a timeout ID. Unlike with state, updating a ref does not re-render your component. Refs are an “escape hatch” from the React paradigm. They are useful when you need to work with non-React systems, such as the built-in browser APIs.
 
 #### useRef
+
+`useRef` is a React Hook that lets you reference a value that's not needed for rendering.
+
+**Syntax**
+
+```
+const ref = useRef(initialValue)
+```
+
+**Parameters**
+
+- `initialValue`: The value you want the ref object's `current` property to be initially. It can be a value of any type.
+
+**Returns**
+
+`useRef` returns an object with a single property.
+
+- `current`: Initially, it's set to the `initialValue` you have passed. You are able to set it to something else later.
+
+> *refs are perfect for storing information that doesn’t affect the visual output of your component*
+
+
+By using a ref, you make sure that ...
+
+- you can store info between re-renders
+- changing it does **NOT** trigger a re-render
+- the info is local to each copy of your component
+
+##### Wait .. what's the difference between refs and state?
+https://react.dev/learn/referencing-values-with-refs#differences-between-refs-and-state
 
 #### useImperativeHandle
 

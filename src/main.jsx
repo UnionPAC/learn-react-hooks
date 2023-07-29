@@ -15,6 +15,10 @@ import MultipleContexts from "./useContext/MultipleContexts.jsx";
 import ScaleUpWithContextAndReducer from "./useContext/ScaleUpWithContextAndReducer.jsx";
 import UpdateObjectViaContext from "./useContext/UpdateObjectViaContext.jsx";
 import UpdateValueViaContext from "./useContext/UpdateValueViaContext.jsx";
+/* useRef */
+import ClickCounter from "./useRef/ClickCounter.jsx";
+import Stopwatch from "./useRef/Stopwatch.jsx";
+//
 import ErrorPage from "./error-page.jsx";
 import "./index.css";
 
@@ -67,6 +71,14 @@ const router = createBrowserRouter([
   {
     path: "/useContext/UpdateValueViaContext",
     element: <UpdateValueViaContext />,
+  },
+  {
+    path: "/useRef/ClickCounter",
+    element: <ClickCounter />,
+  },
+  {
+    path: "/useRef/Stopwatch",
+    element: <Stopwatch />,
   },
 ]);
 

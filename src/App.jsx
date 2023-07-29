@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const App = () => {
   return (
     <div className="h-screen mt-10 flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-4">Learn React Hooks 🦄</h1>
+      <h1 className="text-4xl font-bold mb-4">Learn React Hooks 🦄</h1>
       {/* STATE */}
       <h2 className="text-2xl font-semibold mb-4">State Hooks</h2>
 
@@ -69,8 +69,18 @@ const App = () => {
 
       {/* REF */}
       <h2 className="text-2xl font-semibold mb-4">Ref Hooks</h2>
+
+      {/* USE_REF */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useRef</code>
+      </h4>
       <ul className="space-y-2 text-center mb-4">
-        <li></li>
+        <li>
+          <Link to="/useRef/ClickCounter">Click Counter</Link>
+        </li>
+        <li>
+          <Link to="/useRef/Stopwatch">Stopwatch</Link>
+        </li>
       </ul>
 
       {/* EFFECT */}
