@@ -18,6 +18,9 @@ import UpdateValueViaContext from "./useContext/UpdateValueViaContext.jsx";
 /* useRef */
 import ClickCounter from "./useRef/ClickCounter.jsx";
 import Stopwatch from "./useRef/Stopwatch.jsx";
+/* useImperativeHandle */
+import Example1 from "./useImperativeHandle/Example1.jsx";
+import Example2 from "./useImperativeHandle/Example2.jsx";
 //
 import ErrorPage from "./error-page.jsx";
 import "./index.css";
@@ -79,6 +82,14 @@ const router = createBrowserRouter([
   {
     path: "/useRef/Stopwatch",
     element: <Stopwatch />,
+  },
+  {
+    path: "/useImperativeHandle/Example1",
+    element: <Example1 />,
+  },
+  {
+    path: "/useImperativeHandle/Example2",
+    element: <Example2 />,
   },
 ]);
 

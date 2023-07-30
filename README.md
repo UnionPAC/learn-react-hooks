@@ -172,6 +172,30 @@ https://react.dev/learn/referencing-values-with-refs#differences-between-refs-an
 
 #### useImperativeHandle
 
+`useImperativeHandle` is a React Hook that lets you customize the handle exposed as a ref.
+
+**Syntax**
+
+```
+useImperativeHandle(ref, createHandle, dependencies?)
+```
+
+**Parameters**
+
+`ref`: The ref you received as the second arg from the `forwardRef` render function.
+
+`createHandle`: A function that takes no arguments and returns the ref handle you want to expose.
+
+<small>*optional*</small> `dependencies`: The list of all reactive values references inside of the `createHandle` code.
+
+**Returns**
+
+`useImperativeHandle` returns undefined.
+
+**Use Case**
+
+Example: 
+
 ---
 
 ### Effect Hooks ✨

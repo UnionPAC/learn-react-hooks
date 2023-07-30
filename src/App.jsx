@@ -83,6 +83,19 @@ const App = () => {
         </li>
       </ul>
 
+      {/* USE_IMPERATIVE_HANDLE */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useImperativeHandle</code>
+      </h4>
+      <ul className="space-y-2 text-center mb-4">
+        <li>
+          <Link to="/useImperativeHandle/Example1">Custom Input</Link>
+        </li>
+        <li>
+          <Link to="/useImperativeHandle/Example2">Confirmation Modal</Link>
+        </li>
+      </ul>
+
       {/* EFFECT */}
       <h2 className="text-2xl font-semibold mb-4">Effect Hooks</h2>
       <ul className="space-y-2 text-center mb-4">
