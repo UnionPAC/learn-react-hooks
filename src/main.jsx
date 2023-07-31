@@ -21,6 +21,12 @@ import Stopwatch from "./useRef/Stopwatch.jsx";
 /* useImperativeHandle */
 import Example1 from "./useImperativeHandle/Example1.jsx";
 import Example2 from "./useImperativeHandle/Example2.jsx";
+/* useEffect */
+import Chat from "./useEffect/Chat.jsx";
+import EventListening from "./useEffect/EventListening.jsx";
+import IntersectionObserver from "./useEffect/IntersectionObserver.jsx";
+import Modal from "./useEffect/Modal.jsx";
+import TriggerAnimation from "./useEffect/TriggerAnimation.jsx";
 //
 import ErrorPage from "./error-page.jsx";
 import "./index.css";
@@ -90,6 +96,26 @@ const router = createBrowserRouter([
   {
     path: "/useImperativeHandle/Example2",
     element: <Example2 />,
+  },
+  {
+    path: "/useEffect/Chat",
+    element: <Chat />,
+  },
+  {
+    path: "/useEffect/EventListening",
+    element: <EventListening />,
+  },
+  {
+    path: "/useEffect/IntersectionObserver",
+    element: <IntersectionObserver />,
+  },
+  {
+    path: "/useEffect/Modal",
+    element: <Modal />,
+  },
+  {
+    path: "/useEffect/TriggerAnimation",
+    element: <TriggerAnimation />,
   },
 ]);
 

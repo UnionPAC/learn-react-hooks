@@ -117,12 +117,12 @@ const value = useContext(SomeContext)
 **Reducers** let you consolidate a component's state update logic.
 **Context** lets you pass information deep down to other components.
 
-> *You can combine reducers and context together to manage complex state*
+> _You can combine reducers and context together to manage complex state_
 
 A reducer helps keep the event handlers short and concise. However, as your app grows its hard to to manage component access to state and dispatch.
 
 Solution: Put both the `state` and `dispatch` into context.
-This way, any component below & in the tree can read the state and dispatch actions without *prop-drilling*.
+This way, any component below & in the tree can read the state and dispatch actions without _prop-drilling_.
 
 **How to combine a reducer with context:**
 
@@ -130,7 +130,7 @@ This way, any component below & in the tree can read the state and dispatch acti
 2. Put state and dispatch into context
 3. Use context anywhere in the tree
 
-*Note: You can further declutter the components by moving all wiring into one file*
+_Note: You can further declutter the components by moving all wiring into one file_
 
 ---
 
@@ -158,8 +158,7 @@ const ref = useRef(initialValue)
 
 - `current`: Initially, it's set to the `initialValue` you have passed. You are able to set it to something else later.
 
-> *refs are perfect for storing information that doesn’t affect the visual output of your component*
-
+> _refs are perfect for storing information that doesn’t affect the visual output of your component_
 
 By using a ref, you make sure that ...
 
@@ -168,6 +167,7 @@ By using a ref, you make sure that ...
 - the info is local to each copy of your component
 
 ##### Wait .. what's the difference between refs and state?
+
 https://react.dev/learn/referencing-values-with-refs#differences-between-refs-and-state
 
 #### useImperativeHandle
@@ -186,15 +186,11 @@ useImperativeHandle(ref, createHandle, dependencies?)
 
 `createHandle`: A function that takes no arguments and returns the ref handle you want to expose.
 
-<small>*optional*</small> `dependencies`: The list of all reactive values references inside of the `createHandle` code.
+<small>_optional_</small> `dependencies`: The list of all reactive values references inside of the `createHandle` code.
 
 **Returns**
 
 `useImperativeHandle` returns undefined.
-
-**Use Case**
-
-Example: 
 
 ---
 
@@ -203,6 +199,52 @@ Example:
 Effects let a component connect to and synchronize with external systems. This includes dealing with network, browser DOM, animations, widgets written using a different UI library, and other non-React code.
 
 #### useEffect
+
+`useEffect` is a React Hook that lets you synchronize a component with an external system.
+
+**Syntax**
+
+```
+useEffect(setup, dependencies?)
+```
+
+**Parameters**
+
+`setup`: The function with your effect's logic. Optionally your setup function may also return a _cleanup_ funtion.
+
+- When your component is added to the DOM, React will run your setup function. After every re-render with changed dependencies, React will first run the cleanup function with the old values, and then run your setup function with the new values. After your component is removed from the DOM, React will run your cleanup function.
+
+<small>_optional_</small> `dependencies`: The list of all reactive values referenced inside of the `setup` code.
+
+``
+
+**Returns**
+
+`useEffect` returns undefined.
+
+
+**How to Use The Dependency Array**
+
+1. Passing **no dependency** array
+
+- If you pass no dependency array at all, your Effect runs after every single render (and re-render) of your component.
+
+
+2. Passing an **empty dependency** array
+
+- It will only run after the initial render
+
+3. **Passing a dependency** array
+
+- If you specify the dependencies, your Effect runs after the initial render AND after re-renders with changed dependencies.
+
+**Use Cases**
+
+- Connecting to an external system
+- Wrapping Effects in custom Hooks
+- Controlling a non-React widget
+- Fetching data
+
 
 #### useLayoutEffect
 

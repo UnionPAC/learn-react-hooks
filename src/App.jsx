@@ -98,8 +98,28 @@ const App = () => {
 
       {/* EFFECT */}
       <h2 className="text-2xl font-semibold mb-4">Effect Hooks</h2>
+      {/* USE_EFFECT */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useEffect</code>
+      </h4>
       <ul className="space-y-2 text-center mb-4">
-        <li></li>
+        <li>
+          <Link to="/useEffect/Chat">Chat</Link>
+        </li>
+        <li>
+          <Link to="/useEffect/EventListening">Event Listening</Link>
+        </li>
+        <li>
+          <Link to="/useEffect/IntersectionObserver">
+            Intersection Observer
+          </Link>
+        </li>
+        <li>
+          <Link to="/useEffect/Modal">Modal</Link>
+        </li>
+        <li>
+          <Link to="/useEffect/TriggerAnimation">Trigger Animation</Link>
+        </li>
       </ul>
 
       {/* PERFORMANCE */}
