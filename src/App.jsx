@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="h-screen mt-10 flex flex-col items-center">
+    <div className="min-h-screen mt-10 flex flex-col items-center">
       <h1 className="text-4xl font-bold mb-4">Learn React Hooks 🦄</h1>
       {/* STATE */}
       <h2 className="text-2xl font-semibold mb-4">State Hooks</h2>
@@ -121,24 +121,97 @@ const App = () => {
           <Link to="/useEffect/TriggerAnimation">Trigger Animation</Link>
         </li>
       </ul>
+      {/* USE_LAYOUT_EFFECT */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useLayoutEffect</code>
+      </h4>
+      <ul className="space-y-2 text-center mb-4">
+        <li>
+          <Link to=""></Link>
+        </li>
+      </ul>
+      {/* USE_INSERTION_EFFECT */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useInsertionEffect</code>
+      </h4>
+      <ul className="space-y-2 text-center mb-4">
+        <li>
+          <Link to=""></Link>
+        </li>
+      </ul>
 
       {/* PERFORMANCE */}
       <h2 className="text-2xl font-semibold mb-4">Performance Hooks</h2>
+      {/* USE_MEMO */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useMemo</code>
+      </h4>
       <ul className="space-y-2 text-center mb-4">
-        <li></li>
+        <li>
+          <Link to=""></Link>
+        </li>
+      </ul>
+      {/* USE_CALLBACK */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useCallback</code>
+      </h4>
+      <ul className="space-y-2 text-center mb-4">
+        <li>
+          <Link to=""></Link>
+        </li>
+      </ul>
+      {/* USE_TRANSITION*/}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useTransition</code>
+      </h4>
+      <ul className="space-y-2 text-center mb-4">
+        <li>
+          <Link to=""></Link>
+        </li>
+      </ul>
+      {/* USE_DEFERRED_VALUE */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useDeferredValue</code>
+      </h4>
+      <ul className="space-y-2 text-center mb-4">
+        <li>
+          <Link to=""></Link>
+        </li>
       </ul>
 
       {/* OTHER */}
       <h2 className="text-2xl font-semibold mb-4">Other Hooks</h2>
+      {/* USE_DEBUG_VALUE */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useDebugValue</code>
+      </h4>
       <ul className="space-y-2 text-center mb-4">
-        <li></li>
+        <li>
+          <Link to=""></Link>
+        </li>
+      </ul>
+      {/* USE_ID */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useId</code>
+      </h4>
+      <ul className="space-y-2 text-center mb-4">
+        <li>
+          <Link to=""></Link>
+        </li>
+      </ul>
+      {/* USE_SYNC_EXTERNAL_STORE */}
+      <h4 className="text-lg font-semibold mb-2">
+        <code>useSyncExternalStore</code>
+      </h4>
+      <ul className="space-y-2 text-center mb-4">
+        <li>
+          <Link to=""></Link>
+        </li>
       </ul>
 
       {/* CUSTOM */}
       <h2 className="text-2xl font-semibold mb-4">Custom Hooks</h2>
-      <ul className="space-y-2 text-center mb-4">
-        <li></li>
-      </ul>
+      <div className="mb-20"></div>
     </div>
   );
 };
