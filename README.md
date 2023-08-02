@@ -216,19 +216,15 @@ useEffect(setup, dependencies?)
 
 <small>_optional_</small> `dependencies`: The list of all reactive values referenced inside of the `setup` code.
 
-``
-
 **Returns**
 
 `useEffect` returns undefined.
-
 
 **How to Use The Dependency Array**
 
 1. Passing **no dependency** array
 
 - If you pass no dependency array at all, your Effect runs after every single render (and re-render) of your component.
-
 
 2. Passing an **empty dependency** array
 
@@ -245,10 +241,57 @@ useEffect(setup, dependencies?)
 - Controlling a non-React widget
 - Fetching data
 
-
 #### useLayoutEffect
 
+> `useLayoutEffect` can hurt performance. Prefer useEffect when possible.
+
+`useLayoutEffect` is a version of useEffect that fires before the browser repaints the screen.
+
+**Syntax**
+
+```
+useLayoutEffect(setup, dependencies?)
+```
+
+**Parameters**
+
+`setup`: The function with your Effect's logic. May also optionally return a cleanup function.
+
+<small>_optional_</small> `dependencies`: The list of all reactive values referenced inside of the `setup` code.
+
+**Returns**
+
+`useLayoutEffect` returns undefined.
+
+**Usage**
+
+- Measuring layout before the browser repaints the screen
+
 #### useInsertionEffect
+
+> `useInsertionEffect` is for CSS-in-JS library authors. Unless you are working on a CSS-in-JS library and need a place to inject the styles, you probably want `useEffect` or `useLayoutEffect` instead.
+
+`useInsertionEffect` allows inserting elements into the DOM before any layout effects fire.
+
+**Syntax**
+
+```
+useInsertionEffect(setup, dependencies?)
+```
+
+**Parameters**
+
+`setup`: The function with your Effect's logic. May also optionally return a cleanup function.
+
+<small>_optional_</small> `dependencies`: The list of all reactive values referenced inside of the `setup` code.
+
+**Returns**
+
+`useInsertionEffect` returns undefined.
+
+**Usage**
+
+- Injecting dynamic styles from CSS-in-JS libraries
 
 ---
 
@@ -259,6 +302,36 @@ A common way to optimize re-rendering performance is to skip unnecessary work.
 _For example, you can tell React to reuse a cached calculation or to skip a re-render if the data has not changed since the previous render._
 
 #### useMemo
+
+`useMemo` is a React Hook that lets you cache the result of a calculation between re-renders until its dependencies change.
+
+**Syntax**
+
+```
+const cachedValue = useMemo(calculateValue, dependencies)
+```
+
+**Parameters**
+
+`calculateValue`: The function calculating the value that you want to cache.
+
+`dependencies`: The list of all reactive values referenced inside of the `calculateValue` code.
+
+**Returns**
+
+On the inital render, `useMemo` returns the result of calling `calculateValue` with no arguments.
+
+During the next renders, it will either return an already stored value from the last render, or call `calculateValue` again and return the result that `calculateValue` has returned.
+
+**Usage**
+
+- Skipping expensive recalculations
+
+> *Note: You should only rely on `useMemo` as a performance optimization. Add `useMemo` after the code has been written and is working to possibly improve performance.*
+
+- Skipping re-rendering of components
+
+- Memoizing a dependency of another Hook
 
 #### useCallback
 

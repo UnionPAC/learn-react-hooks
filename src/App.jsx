@@ -127,16 +127,7 @@ const App = () => {
       </h4>
       <ul className="space-y-2 text-center mb-4">
         <li>
-          <Link to=""></Link>
-        </li>
-      </ul>
-      {/* USE_INSERTION_EFFECT */}
-      <h4 className="text-lg font-semibold mb-2">
-        <code>useInsertionEffect</code>
-      </h4>
-      <ul className="space-y-2 text-center mb-4">
-        <li>
-          <Link to=""></Link>
+          <Link to="/useLayoutEffect/Tooltip">Tooltip</Link>
         </li>
       </ul>
 
@@ -148,7 +139,7 @@ const App = () => {
       </h4>
       <ul className="space-y-2 text-center mb-4">
         <li>
-          <Link to=""></Link>
+          <Link to="/useMemo/ExpensiveCalculation">Expensive Calculation</Link>
         </li>
       </ul>
       {/* USE_CALLBACK */}

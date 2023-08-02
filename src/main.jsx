@@ -27,6 +27,10 @@ import EventListening from "./useEffect/EventListening.jsx";
 import IntersectionObserver from "./useEffect/IntersectionObserver.jsx";
 import Modal from "./useEffect/Modal.jsx";
 import TriggerAnimation from "./useEffect/TriggerAnimation.jsx";
+/* useLayoutEffect */
+import TooltipExample from "./useLayoutEffect/Tooltip.jsx";
+/* useMemo */
+import ExpensiveCalculation from "./useMemo/ExpensiveCalculation.jsx";
 //
 import ErrorPage from "./error-page.jsx";
 import "./index.css";
@@ -116,6 +120,14 @@ const router = createBrowserRouter([
   {
     path: "/useEffect/TriggerAnimation",
     element: <TriggerAnimation />,
+  },
+  {
+    path: "/useLayoutEffect/Tooltip",
+    element: <TooltipExample />,
+  },
+  {
+    path: "/useMemo/ExpensiveCalculation",
+    element: <ExpensiveCalculation />,
   },
 ]);
 
