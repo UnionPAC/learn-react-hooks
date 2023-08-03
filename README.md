@@ -335,6 +335,34 @@ During the next renders, it will either return an already stored value from the 
 
 #### useCallback
 
+`useCallback` is a React hook that lets you cache a function definition between re-renders.
+
+**Syntax**
+
+```
+const cachedFn = useCallback(fn, dependencies)
+```
+
+**Parameters**
+
+`fn`: The function value that you want to cache.
+
+`dependencies`: The list of all reactive values referenced inside of the `fn` code.
+
+**Returns**
+
+On the initial render, `useCallback` returns the `fn` function you have passed.
+
+During subsequent renders, it will either return an already stored `fn` function from the last render (if the dependencies haven’t changed), or return the `fn` function you have passed during this render.
+
+**Usage**
+
+- Skipping re-rendering of components
+- Updating state from a memoized callback
+- Optimizing a custom Hook
+
+**Important**: In JavaScript, a function () {} or () => {} always creates a different function. That means the props will never be the same, and a `memo` optimization won't work.
+
 #### useTransition
 
 #### useDeferredValue

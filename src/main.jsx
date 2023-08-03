@@ -31,6 +31,8 @@ import TriggerAnimation from "./useEffect/TriggerAnimation.jsx";
 import TooltipExample from "./useLayoutEffect/Tooltip.jsx";
 /* useMemo */
 import ExpensiveCalculation from "./useMemo/ExpensiveCalculation.jsx";
+/* useCallback */
+import SearchAndShuffle from "./useCallback/SearchAndShuffle.jsx";
 //
 import ErrorPage from "./error-page.jsx";
 import "./index.css";
@@ -128,6 +130,10 @@ const router = createBrowserRouter([
   {
     path: "/useMemo/ExpensiveCalculation",
     element: <ExpensiveCalculation />,
+  },
+  {
+    path: "/useCallback/SearchAndShuffle",
+    element: <SearchAndShuffle />,
   },
 ]);
 
