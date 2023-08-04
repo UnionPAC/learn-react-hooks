@@ -189,7 +189,9 @@ const App = () => {
       </h4>
       <ul className="space-y-2 text-center mb-4">
         <li>
-          <Link to=""></Link>
+          <Link to="/useSyncExternalStore/SubscribeToExternalStore">
+            Subscribe To External Store
+          </Link>
         </li>
       </ul>
 

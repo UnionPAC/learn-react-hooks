@@ -500,6 +500,31 @@ function PasswordField() {
 
 #### useSyncExternalStore
 
+`useSyncExternalStore` is a React Hook that lets you subscribe to an external store.
+
+**Syntax**
+
+`const snapshot = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot?)`
+
+**Parameters**
+
+`subscribe`: A function that takes a single `callback` argument and subscribes it to the store. When the store changes, it should invoke the provided `callback`.
+
+`getSnapshot`: A function that returns a snapshot of the data in the store that's needed by the component.
+
+*optional* `getServerSnapshot`: A function that returns the initial snapshot of the data in the store.
+
+**Returns**
+
+The current snapshot of the store which you can use in your rendering logic.
+
+**Usage**
+
+- Subscribing to an external store
+- Subscribing to a browser API
+- Extracting the logic to a custom Hook
+
+
 ---
 
 ### Custom Hooks 👑

@@ -39,6 +39,8 @@ import Tabs from "./useTransition/Tabs.jsx";
 import SearchAlbums from "./useDeferredValue/SearchAlbums.jsx";
 /* useDebugValue */
 import CustomHookValue from "./useDebugValue/CustomHookValue.jsx";
+/* useSyncExternalStore */
+import SubscribeToExternalStore from "./useSyncExternalStore/SubscribeToExternalStore.jsx";
 //
 import ErrorPage from "./error-page.jsx";
 import "./index.css";
@@ -152,6 +154,10 @@ const router = createBrowserRouter([
   {
     path: "/useDebugValue/CustomHookValue",
     element: <CustomHookValue />,
+  },
+  {
+    path: "/useSyncExternalStore/SubscribeToExternalStore",
+    element: <SubscribeToExternalStore />,
   },
 ]);
 
