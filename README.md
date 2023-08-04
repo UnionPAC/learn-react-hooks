@@ -327,7 +327,7 @@ During the next renders, it will either return an already stored value from the 
 
 - Skipping expensive recalculations
 
-> *Note: You should only rely on `useMemo` as a performance optimization. Add `useMemo` after the code has been written and is working to possibly improve performance.*
+> _Note: You should only rely on `useMemo` as a performance optimization. Add `useMemo` after the code has been written and is working to possibly improve performance._
 
 - Skipping re-rendering of components
 
@@ -364,6 +364,35 @@ During subsequent renders, it will either return an already stored `fn` function
 **Important**: In JavaScript, a function () {} or () => {} always creates a different function. That means the props will never be the same, and a `memo` optimization won't work.
 
 #### useTransition
+
+`useTransition` is a React hook that lets you update the state without blocking the UI.
+
+**Syntax**
+
+```
+const [isPending, startTransition] = useTransition()
+```
+
+**Parameters**
+
+`useTransition` does not take any parameters.
+
+**Returns**
+
+`useTransition` returns an array with exactly two items.
+
+1. The `isPending` flag that tells you whether there is a pending item
+
+2. The `startTransition` function that lets you mark a state update as a transition
+
+**Usage**
+
+- Marking a state update as a non-blocking transition
+- Updating the parent component in a transition
+- Displaying a pending visual state during the transition
+- Preventing unwanted loading indicators
+- Building a Suspense-enabled router
+
 
 #### useDeferredValue
 

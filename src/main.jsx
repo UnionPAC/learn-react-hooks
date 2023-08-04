@@ -33,6 +33,8 @@ import TooltipExample from "./useLayoutEffect/Tooltip.jsx";
 import ExpensiveCalculation from "./useMemo/ExpensiveCalculation.jsx";
 /* useCallback */
 import SearchAndShuffle from "./useCallback/SearchAndShuffle.jsx";
+/* useTransition */
+import Tabs from "./useTransition/Tabs.jsx";
 //
 import ErrorPage from "./error-page.jsx";
 import "./index.css";
@@ -134,6 +136,10 @@ const router = createBrowserRouter([
   {
     path: "/useCallback/SearchAndShuffle",
     element: <SearchAndShuffle />,
+  },
+  {
+    path: "/useTransition/Tabs",
+    element: <Tabs />,
   },
 ]);
 
