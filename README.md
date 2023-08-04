@@ -393,8 +393,27 @@ const [isPending, startTransition] = useTransition()
 - Preventing unwanted loading indicators
 - Building a Suspense-enabled router
 
-
 #### useDeferredValue
+
+`useDeferredValue` is a React Hook that lets you defer updating a part of the UI.
+
+**Syntax**
+
+```
+const deferredValue = useDeferredValue(value)
+```
+
+**Parameters**
+
+`value`: The value you want to defer. It can have any type.
+
+**Returns**
+
+During the initial render, the returned deferred value will be the same as the value you provided. During updates, React will first attempt a re-render with the old value, and then try another re-render in the background with the new value.
+
+**Usage**
+
+- Showing stale content while fresh content is loading
 
 ---
 

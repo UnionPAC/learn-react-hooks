@@ -166,7 +166,7 @@ const App = () => {
       </h4>
       <ul className="space-y-2 text-center mb-4">
         <li>
-          <Link to=""></Link>
+          <Link to="/useDeferredValue/SearchAlbums">Search Albums</Link>
         </li>
       </ul>
 

@@ -35,6 +35,8 @@ import ExpensiveCalculation from "./useMemo/ExpensiveCalculation.jsx";
 import SearchAndShuffle from "./useCallback/SearchAndShuffle.jsx";
 /* useTransition */
 import Tabs from "./useTransition/Tabs.jsx";
+/* useDeferredValue */
+import SearchAlbums from "./useDeferredValue/SearchAlbums.jsx";
 //
 import ErrorPage from "./error-page.jsx";
 import "./index.css";
@@ -140,6 +142,10 @@ const router = createBrowserRouter([
   {
     path: "/useTransition/Tabs",
     element: <Tabs />,
+  },
+  {
+    path: "/useDeferredValue/SearchAlbums",
+    element: <SearchAlbums />,
   },
 ]);
 
