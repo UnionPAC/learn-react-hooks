@@ -37,6 +37,8 @@ import SearchAndShuffle from "./useCallback/SearchAndShuffle.jsx";
 import Tabs from "./useTransition/Tabs.jsx";
 /* useDeferredValue */
 import SearchAlbums from "./useDeferredValue/SearchAlbums.jsx";
+/* useDebugValue */
+import CustomHookValue from "./useDebugValue/CustomHookValue.jsx";
 //
 import ErrorPage from "./error-page.jsx";
 import "./index.css";
@@ -146,6 +148,10 @@ const router = createBrowserRouter([
   {
     path: "/useDeferredValue/SearchAlbums",
     element: <SearchAlbums />,
+  },
+  {
+    path: "/useDebugValue/CustomHookValue",
+    element: <CustomHookValue />,
   },
 ]);
 
