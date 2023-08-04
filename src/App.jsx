@@ -183,15 +183,6 @@ const App = () => {
           </Link>
         </li>
       </ul>
-      {/* USE_ID */}
-      <h4 className="text-lg font-semibold mb-2">
-        <code>useId</code>
-      </h4>
-      <ul className="space-y-2 text-center mb-4">
-        <li>
-          <Link to=""></Link>
-        </li>
-      </ul>
       {/* USE_SYNC_EXTERNAL_STORE */}
       <h4 className="text-lg font-semibold mb-2">
         <code>useSyncExternalStore</code>
