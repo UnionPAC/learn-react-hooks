@@ -531,4 +531,24 @@ The current snapshot of the store which you can use in your rendering logic.
 
 https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component
 
+Sometimes, you'll wish that there was a Hook for some more specific purpose.
+
+*For example*
+
+- to fetch data
+- to keep track of whether the user is online
+- connect to a chat room
+
+For these, we can build our own custom Hooks!
+
+**Hook names always start with `use`**
+
+1. React component names MUST start with a capital letter like ``StatusBar. React components also need to return something that REact knows how to display, like a piece of JSX.
+
+2. Hook names must start with `use` followed by a capital letter, like `useState`.
+
+*Note: Custom Hooks let you share stateful logic but not state itself. Each call to a Hook is completely independent from every other call to the same Hook.*
+
+
+
 ---
